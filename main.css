@@ -57,7 +57,7 @@ body {
   transform: translateX(0%);
 }
 
-.mobile-close {
+.mobile-menu-close {
   font-size: 20px;
   position: fixed;
   right: 1rem;
@@ -112,11 +112,6 @@ body {
   top: 25px;
 }
 
-.header-user {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .header-mobile-list {
   list-style: none;
   padding: 0;
@@ -141,4 +136,54 @@ body {
   position: absolute;
   left: 0;
   top: 11px;
+}
+
+.header-user {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.header-user-fb {
+  background: #4267b2;
+  border-radius: 15px;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 20px;
+  margin: 5px 10px;
+}
+
+.header-user-fb a {
+  height: 100%;
+  width: 100%;
+}
+.header-user-fb > i {
+  color: #fff;
+}
+
+.header-user-login {
+  background: rgba(0,0,0,.25);
+  box-shadow: 0 0 5px #ccc;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.header-mobile-user {
+  position: fixed;
+  background: rgba(0, 0, 0, .8);
+  padding: 60px 10px 10px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  transform: translateX(-150%);
+}
+
+.header-user-input:checked ~ .header-mobile-user {
+  transform: translateX(0%)
 }
