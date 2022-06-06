@@ -16,7 +16,6 @@ body {
 }
 
 .header-logo {
-  float: left;
   height: 60px;
   padding: 10px 0;
 }
@@ -40,6 +39,7 @@ body {
 .header-mobile {
   position: fixed;
   background: rgba(0, 0, 0, .8);
+  box-shadow: 0 0 10px #999;
   padding: 60px 10px 10px;
   top: 0;
   left: 0;
@@ -127,7 +127,6 @@ body {
 .header-mobile-link {
   text-decoration: none;
   color: rgb(2, 133, 181);
-  background-color: transparent;
 }
 
 .header-mobile-list>li>i {
@@ -157,8 +156,6 @@ body {
 .header-user-fb a {
   height: 100%;
   width: 100%;
-}
-.header-user-fb > i {
   color: #fff;
 }
 
@@ -176,14 +173,109 @@ body {
 .header-mobile-user {
   position: fixed;
   background: rgba(0, 0, 0, .8);
+  box-shadow: 0 0 10px #999;
+  right: 0;
   padding: 60px 10px 10px;
   top: 0;
   right: 0;
   bottom: 0;
   width: 300px;
-  transform: translateX(-150%);
+  transform: translateY(-101%);
 }
 
 .header-user-input:checked ~ .header-mobile-user {
-  transform: translateX(0%)
+  transform: translateY(0%)
+}
+
+.mobile-login-close {
+  font-size: 20px;
+  position: fixed;
+  left: 1rem;
+  top: 10px;
+  opacity: 0.5;
+}
+.header-mobile-user-top {
+  height: 120px;
+  padding: 10px;
+  position: relative;
+}
+.header-mobile-user-welcome {
+  position: absolute;
+  top: 10px;
+}
+.header-mobile-user-login {
+  position: absolute;
+  top: 50px;
+}
+.header-mobile-user-register {
+  position: absolute;
+  top: 50px;
+  left: 8em;
+}
+/* Tablet */
+@media only screen and (min-width:740px) and (max-width:1023px) {
+  .header-grid {
+    display: block;
+  }
+  .header-logo {
+    float: left ;
+    height: 60px;
+    padding: 10px 0;
+  }
+  .header-menu {
+    float: left;
+    cursor: pointer;
+    font-size: 25px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 10px;
+    margin-top: 9px;
+    text-align: center;
+    width: 40px;
+  }
+  .header-user {
+    float: right;
+    height: 60px;
+    margin-top: 9px;
+  }
+}
+/* PC */
+@media only screen and (min-width:1024px) {
+  .header {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .header-grid {
+    width: 100%;
+    grid-template-columns: 10% 80% 10%;
+  }
+  .header-menu {
+    display: none;
+  }
+  .header-pc-left {
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+  .header-pc-menu {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .header-pc-menu > li {
+    list-style: none;
+  }
+  .header-pc-menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ccc;
+  }
+  .header-pc-search {
+    width: 30%;
+    margin-top: -30px;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+  }
 }
