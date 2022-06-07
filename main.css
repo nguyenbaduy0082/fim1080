@@ -212,6 +212,9 @@ body {
   top: 50px;
   left: 8em;
 }
+.header-pc-left {
+  display: none;
+}
 /* Tablet */
 @media only screen and (min-width:740px) and (max-width:1023px) {
   .header-grid {
@@ -224,13 +227,10 @@ body {
   }
   .header-menu {
     float: left;
-    cursor: pointer;
-    font-size: 25px;
     height: 40px;
     line-height: 40px;
     margin-left: 10px;
     margin-top: 9px;
-    text-align: center;
     width: 40px;
   }
   .header-user {
@@ -238,30 +238,43 @@ body {
     height: 60px;
     margin-top: 9px;
   }
+  .header-pc-left {
+    display: none;
+  }
 }
 /* PC */
 @media only screen and (min-width:1024px) {
   .header {
+    background-color: #333;
+    border: 0;
+    box-shadow: 0 0 1px 0 #adadad;
+  }
+  .header-container{
     max-width: 1200px;
     margin: 0 auto;
   }
   .header-grid {
     width: 100%;
     grid-template-columns: 10% 80% 10%;
+  
   }
   .header-menu {
     display: none;
   }
   .header-pc-left {
+    display: block;
     float: left;
     width: 100%;
     position: relative;
+    height: 100%;
   }
   .header-pc-menu {
     width: 70%;
+    height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
   }
   .header-pc-menu > li {
     list-style: none;
@@ -270,12 +283,105 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     color: #ccc;
+    font-size: 14px;
+    padding: 20px 0;
   }
   .header-pc-search {
     width: 30%;
     margin-top: -30px;
     position: absolute;
-    top: 4px;
+    top: 24px;
     right: 10px;
+  }
+  #category-menu {
+    display: none;
+    width: 470px;
+    background: rgba(0,0,0,.8);
+    position: absolute;
+    top: 45px;
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid silver;
+  }
+
+  #category:hover > a {
+    color: #ff4c00;
+  }
+  #nation:hover > a {
+    color: #ff4c00;
+  }
+  #odd-movie:hover > a {
+    color: #ff4c00;
+  }
+  #series-movie:hover > a {
+    color: #ff4c00;
+  }
+  #theater:hover > a {
+    color: #ff4c00;
+  }
+  #coming-soon:hover > a {
+    color: #ff4c00;
+  }
+  #category:hover #category-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:repeat(11,30px) ;
+  }
+  #category-menu li:hover a{
+    color: #ff4c00;
+  }
+  #nation-menu {
+    display: none;
+    width: 470px;
+    background: rgba(0,0,0,.8);
+    position: absolute;
+    top: 45px;
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid silver;
+  }
+  #nation:hover #nation-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:repeat(6,30px) ;
+  }
+  #nation-menu li:hover a{
+    color: #ff4c00;
+  }
+  #odd-movie-menu {
+    display: none;
+    width: 470px;
+    background: rgba(0,0,0,.8);
+    position: absolute;
+    top: 45px;
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid silver;
+  }
+  #odd-movie:hover #odd-movie-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:repeat(6,30px) ;
+  }
+  #odd-movie-menu li:hover a{
+    color: #ff4c00;
+  }
+  #series-movie-menu {
+    display: none;
+    width: 470px;
+    background: rgba(0,0,0,.8);
+    position: absolute;
+    top: 45px;
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid silver;
+  }
+  #series-movie:hover #series-movie-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:repeat(6,30px) ;
+  }
+  #series-movie-menu li:hover a{
+    color: #ff4c00;
   }
 }
