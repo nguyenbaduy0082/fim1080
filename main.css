@@ -58,6 +58,9 @@ body {
 .header-input:checked~.header-mobile {
   transform: translateX(0%);
 }
+.header-input:checked ~ .overlay {
+  display: block;
+}
 
 .mobile-menu-close {
   font-size: 20px;
@@ -184,9 +187,22 @@ body {
   width: 300px;
   transform: translateY(-101%);
 }
+.overlay {
+  position: fixed;
+  top: 0;
+  right:0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+}
 
 .header-user-input:checked~.header-mobile-user {
-  transform: translateY(0%)
+  transform: translateY(0%);
+}
+
+.header-user-input:checked ~ .overlay {
+  display: block;
 }
 
 .mobile-login-close {
@@ -230,10 +246,9 @@ body {
 .container-one {
   max-width: 740px;
   margin: 0 auto;
-  margin-top:30px ;
 }
 .container-one-top {
-  margin: 0 10px;
+  padding-left: 5px;
 }
 
 .container-one-top-title span {
@@ -252,20 +267,18 @@ body {
 }
 .container-one-top-title {
   text-transform: uppercase;
-  height: 30px;
-  position: relative;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
 }
 .container-one-top-title-left {
-  position: absolute;
-  left: 35px;
-  bottom: 8px;
+  float: left;
 }
 .container-one-top-title-right {
-  position: absolute;
-  right: 15px;
-  bottom: 8px;
+  float: right;
 }
 #film {
+  display: none;
   position: absolute;
   left:0;
   bottom: 8px;
@@ -273,16 +286,27 @@ body {
   color: red;
 }
 #film1 {
+  display: none;
   position: absolute;
   right: 0;
   bottom: 12px;
 }
 .container-one-top-content {
-  position: relative;
   width: 100%;
+  float: left;
 }
 .container-one-top-content-top {
   position: relative;
+}
+.container-one-top-content-top-hot_item {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  position: relative;
+}
+.container-one-top-content-top-img {
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 .container-one-top-content-top-img img {
   width: 100%;
@@ -317,7 +341,7 @@ body {
 }
 .container-one-top-content-top-sub {
   position: absolute;
-  top: 30px;
+  top: 10px;
   left: 10px;
   background: hsla(0,0%,100%,.75);
   border-radius: 3px;
