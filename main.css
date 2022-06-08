@@ -307,6 +307,7 @@ body {
   position: relative;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 .container-one-top-content-top-img img {
   width: 100%;
@@ -364,6 +365,29 @@ body {
   right: 10px;
 }
 
+.container-one-buttom {
+  max-width: 740px;
+  margin: 0 auto;
+  background: rgb(204, 204, 204);
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+.container-one-buttom-content {
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+.container-one-buttom-content-one a {
+  text-decoration: none;
+}
+.container-one-buttom-content {
+  width: 50%;
+  height: 50%;
+}
+.container-one-buttom-content-one img {
+  width: 100%;
+  height: 100%;
+}
 
 /* Tablet */
 @media only screen and (min-width:740px) and (max-width:1023px) {
@@ -534,6 +558,7 @@ body {
     list-style: none;
     padding: 10px;
     border-bottom: 1px solid silver;
+    z-index: 100;
   }
 
   #odd-movie:hover #odd-movie-menu {
