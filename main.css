@@ -843,31 +843,31 @@ body {
   }
 
   .container-one-new-content-top-hot_item1 {
-    height: 224px;
+    height: 215px;
     position: relative;
-    width: 399px;
-    padding-right: 5px;
+    width: 390px;
+    padding: 0;
   }
   .container-one-new-content-top-hot_item2 {
-    height: 112px;
-    width: 193.5px;
+    height: 101px;
+    width: 189.5px;
     position: relative;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 3;
     grid-column-end: 4;
-    padding-right: 5px;
-    margin-bottom: 10px;
+    padding: 0;
   }
   .container-one-new-content {
     width: 100%;
-    grid-template-columns: repeat(5,205.5px);
-    grid-template-rows: repeat(3,110px);
+    grid-template-columns: repeat(5,190.5px);
+    grid-template-rows: repeat(3,103px);
+    grid-gap: 10px;
   }
   .container-one-new-content-one {
     padding: 0;
     height: 102px;
-    width: 188.5px;
+    width: 190px;
   }
   .item-title-new {
     position: absolute;
