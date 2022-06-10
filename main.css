@@ -265,6 +265,9 @@ body {
   overflow: hidden;
   width: 100%;
 }
+.container-one-top-title {
+  margin: 0 10px;
+}
 
 .container-one-top-title span {
   float: left;
@@ -321,7 +324,8 @@ body {
   float: left;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 174px);
+  grid-gap: 10px;
 }
 
 .container-one-top-content-top-hot_item {
@@ -330,8 +334,6 @@ body {
   float: left;
   grid-column-start: 1;
   grid-column-end: 3;
-  margin-bottom: 10px;
-  margin-right: 10px;
 }
 
 .container-one-top-content-top-img {
@@ -416,10 +418,8 @@ body {
   color: #eee;
   float: left;
   overflow: hidden;
-  height: 276px;
-  width: 191px;
-  padding-right: 10px;
-  padding-bottom: 10px;
+  height: 264px;
+  width: 174px;
 }
 
 .container-one-bottom-content-one-img {
@@ -428,7 +428,7 @@ body {
   overflow: hidden;
 }
 
-.container-one-bottom-content-one a {
+.container-one-bottom-content-img-one a {
   text-decoration: none;
 }
 
@@ -456,20 +456,20 @@ body {
 
 .item-title {
   position: absolute;
-  bottom: 22px;
+  bottom: 15px;
   left: 0px;
 }
 
 .film-views {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   left: 5px;
   font-size: 9px;
 }
 
 .flim-likes {
   position: absolute;
-  bottom: 10px;
+  bottom: 0px;
   right: 18px;
   font-size: 9px;
 }
@@ -619,6 +619,30 @@ body {
   font-size: 15px;
   color: rgb(255, 255, 255);
 }
+.container-three {
+  width: 375px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.container-three-new-content {
+  display: grid;
+  grid-template-columns: repeat(2,172.5px);
+  grid-gap: 10px;
+}
+.container-one-bottom-content-two {
+  position: relative;
+  color: #eee;
+  float: left;
+  overflow: hidden;
+  height: 250px;
+  width: 172.5px;
+  margin-left: 10px;
+}
+#img {
+  width: 100%;
+  height: 100%;
+}
 
 
 /* Tablet */
@@ -708,8 +732,8 @@ body {
 
   .container-one-new-content-top-hot_item1 {
     position: relative;
-    height: 212px;
-    width: 366px;
+    height: 228px;
+    width: 376px;
     padding: 0;
   }
 
@@ -733,6 +757,46 @@ body {
     padding-bottom: 6px;
   }
 
+  /* kết thúc container one tablet */
+
+  /* bắt đầu container two tablet */
+  .container-two-content-grid {
+    display: block;
+    width: 9999px;
+  }
+  .container-two-content {
+    margin: auto;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 800px;
+  }
+  .container-two-content-grid-one {
+    height: 289px;
+    width: 200px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* kết thúc container two tablet */
+
+  /* bắt đầu container three tablet */
+  .container-three {
+    width: 768px;
+  }
+  .container-three-new-content {
+    display: block;
+    width: 9999px;
+    overflow: hidden;
+    position: relative;
+  }
+  .container-one-bottom-content-two {
+    height: 260px;
+    width: 179.5px;
+  }
+
+  /* kết thúc container three tablet */
 
 }
 
@@ -913,6 +977,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 1000px;
+    margin-bottom: 60px;
   }
 
   .container-one-top-content {
@@ -976,7 +1041,56 @@ body {
   .item-title-new {
     position: absolute;
     bottom: 0px;
+  }
+  /* kết thúc container one pc */
 
+
+  /* bắt đầu container two pc */
+
+  .container-two-content-grid {
+    display: block;
+  }
+  .container-two-content {
+    margin: auto;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 1000px;
+  }
+  .container-two-content-grid-one {
+    height: 289px;
+    width: 200px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    margin-bottom:10px ;
+  }
+  .container-two-title {
+    font-size: 20px;
+  }
+  .container-two-title h5 {
+    margin: 0;
   }
 
+  /*kết thúc container two pc  */
+
+
+  /* bắt đầu container three pc */
+
+  .container-three {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    margin-bottom: 60px;
+  }
+  .container-three-new-content {
+    display: block;
+    width: 9999px;
+    overflow: hidden;
+    position: relative;
+  }
+  .container-one-bottom-content-two {
+    height: 275px;
+    width: 190px;
+  }
 }
