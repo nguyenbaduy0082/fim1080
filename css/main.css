@@ -1,0 +1,1169 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #333;
+    color: #bbb;
+    font-family: Open Sans, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    margin: 0 auto;
+  }
+
+  img {
+    transition: transform .2s;
+  }
+  img:hover {
+    transform: scale(1.2);
+  }
+  
+  /* bắt đầu header mobile */
+  .header {
+    height: 60px;
+    border: 0;
+    box-shadow: 0 0 1px 0 #adadad;
+    position: fixed;
+    background-color: #333;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  
+  
+  .header-logo {
+    height: 60px;
+    padding: 10px 0;
+  }
+  
+  .header-logo a {
+    display: block;
+    padding: 9px 0;
+  }
+  
+  .header-logo img {
+    height: 22px;
+  }
+  
+  .header-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    padding-left: 7px;
+  }
+  
+  .header-mobile {
+    position: fixed;
+    background: rgba(0, 0, 0, .8);
+    box-shadow: 0 0 10px #999;
+    padding: 60px 10px 10px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    transform: translateX(-150%);
+  }
+  
+  .header-mobile-input {
+    font-size: 25px;
+    margin-left: 10px;
+  }
+  
+  .header-input:checked~.header-mobile {
+    transform: translateX(0%);
+  }
+  
+  .header-input:checked~.overlay {
+    display: block;
+  }
+  
+  .mobile-menu-close {
+    font-size: 20px;
+    position: fixed;
+    right: 1rem;
+    top: 10px;
+    opacity: 0.5;
+  }
+  
+  .header-mobile-logo {
+    height: 60px;
+    position: absolute;
+    top: 20px;
+    float: left;
+  }
+  
+  .header-mobile-logo a {
+    display: block;
+    height: 20px;
+  }
+  
+  .header-mobile-logo img {
+    height: 22px;
+  }
+  
+  .header-mobile-search {
+    position: relative;
+    width: 280px;
+    padding-top: 20px;
+  }
+  
+  .header-mobile-search input {
+    background: 0 0;
+    border: 1px solid #444;
+    border-radius: 15px;
+    display: block;
+    font-size: 13px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 30px;
+    width: 100%;
+  }
+  
+  .header-mobile-search i {
+    color: #999;
+    cursor: pointer;
+    font-size: 15px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    width: 20px;
+    position: absolute;
+    right: 5px;
+    top: 25px;
+  }
+  
+  .header-mobile-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .header-mobile-list>li {
+    height: 40px;
+    padding: 0px 40px;
+    line-height: 40px;
+    position: relative;
+  }
+  
+  .header-mobile-link {
+    text-decoration: none;
+    color: rgb(2, 133, 181);
+  }
+  
+  .header-mobile-list>li>i {
+    color: rgb(2, 133, 181);
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    top: 11px;
+  }
+  
+  .header-user {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .header-user-fb {
+    background: #4267b2;
+    border-radius: 15px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+    margin: 5px 10px;
+  }
+  
+  .header-user-fb a {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+  }
+  
+  .header-user-login {
+    background: rgba(0, 0, 0, .25);
+    box-shadow: 0 0 5px #ccc;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+  }
+  
+  .header-mobile-user {
+    position: fixed;
+    background: rgba(0, 0, 0, .8);
+    box-shadow: 0 0 10px #999;
+    right: 0;
+    padding: 60px 10px 10px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    transform: translateY(-101%);
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+  }
+  
+  .header-user-input:checked~.header-mobile-user {
+    transform: translateY(0%);
+  }
+  
+  .header-user-input:checked~.overlay {
+    display: block;
+  }
+  
+  .mobile-login-close {
+    font-size: 20px;
+    position: fixed;
+    left: 1rem;
+    top: 10px;
+    opacity: 0.5;
+  }
+  
+  .header-mobile-user-top {
+    height: 120px;
+    padding: 10px;
+    position: relative;
+  }
+  
+  .header-mobile-user-welcome {
+    position: absolute;
+    top: 10px;
+  }
+  
+  .header-mobile-user-login {
+    position: absolute;
+    top: 50px;
+  }
+  
+  .header-mobile-user-register {
+    position: absolute;
+    top: 50px;
+    left: 8em;
+  }
+  
+  .header-pc-left {
+    display: none;
+  }
+  
+  /* kết thúc header mobile */
+  
+  /* bắt đầu container one mobile */
+  
+  .container-one {
+    width: 375px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .container-one-top {
+    padding: 60px 0;
+    overflow: hidden;
+    width: 100%;
+  }
+  .container-one-top-title {
+    margin: 0 10px;
+  }
+  
+  .container-one-top-title span {
+    float: left;
+    font-size: 16px;
+    margin: 0;
+    color: #fff;
+    padding: 0px 7px;
+  }
+  
+  .container-one-top-title a {
+    float: right;
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    padding: 0px 7px;
+  }
+  
+  .container-one-top-title {
+    text-transform: uppercase;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+  }
+  
+  .container-one-top-title-left {
+    position: absolute;
+    left: 30px;
+    top: 10px;
+  }
+  
+  .container-one-top-title-right {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+  }
+  
+  #film {
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    font-size: 30px;
+    color: red;
+  }
+  
+  #film1 {
+    position: absolute;
+    right: 15px;
+    bottom: 13px;
+  }
+  
+  .container-one-top-content {
+    width: 100%;
+    float: left;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 174px);
+    grid-gap: 10px;
+  }
+  
+  .container-one-top-content-top-hot_item {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  .container-one-top-content-top-img {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .container-one-top-content-top-img img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .container-one-top-content-top-view {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  .container-one-top-content-top-title {
+    position: absolute;
+    bottom: 0px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.39) 34%, rgb(0, 0, 0) 87%);
+    width: 100%;
+  }
+  
+  .container-one-top-content-top-title h3 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .container-one-top-content-top-title h4 {
+    display: none;
+  }
+  
+  .container-one-top-content-top-FHD {
+    position: absolute;
+    bottom: 70px;
+    left: 10px;
+    background: #ff4c00;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+  }
+  
+  .container-one-top-content-top-sub {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: hsla(0, 0%, 100%, .75);
+    border-radius: 3px;
+    color: #0285b5;
+    padding: 0 5px;
+  }
+  
+  .container-one-top-content-top-point {
+    position: absolute;
+    bottom: 70px;
+    right: 10px;
+  }
+  
+  #star {
+    color: #e89105;
+    font-size: 18px;
+  }
+  
+  .container-one-top-content-top-episode {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .container-one-bottom {
+    float: left;
+    position: relative;
+    width: 100%;
+  }
+  
+  .container-one-bottom-content-one {
+    position: relative;
+    color: #eee;
+    float: left;
+    overflow: hidden;
+    height: 264px;
+    width: 174px;
+  }
+  
+  .container-one-bottom-content-one-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .container-one-bottom-content-img-one a {
+    text-decoration: none;
+  }
+  
+  #img-mobile {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .item-star {
+    position: absolute;
+    bottom: 60px;
+    right: 15px;
+  }
+  
+  .item-CAM {
+    position: absolute;
+    bottom: 60px;
+    left: 5px;
+    background: #ff4c00;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    padding: 0 2px;
+  }
+  
+  .item-title {
+    position: absolute;
+    bottom: 15px;
+    left: 0px;
+    font-size: 16px;
+    
+  }
+  
+  .film-views {
+    position: absolute;
+    bottom: 0px;
+    left: 5px;
+    font-size: 9px;
+  }
+  
+  .flim-likes {
+    position: absolute;
+    bottom: 0px;
+    right: 18px;
+    font-size: 9px;
+  }
+  
+  .item-sub {
+    background: hsla(0, 0%, 100%, .75);
+    border-radius: 3px;
+    color: #0285b5;
+    left: 5px;
+    padding: 0 5px;
+    position: absolute;
+    top: 10px;
+  }
+  
+  .container-one-new {
+    float: left;
+    position: relative;
+    width: 100%;
+  }
+  
+  .container-one-new-content-one {
+    position: relative;
+    color: #eee;
+    float: left;
+    overflow: hidden;
+    height: 110px;
+    width: 188.5px;
+  
+  }
+  
+  .item-title-new {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0), rgba(0, 0, 0, .39) 34%, #000 87%);
+    width: 100%;
+  }
+  
+  .container-one-new-content-one-img img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .container-one-new-content {
+    display: grid;
+    grid-template-columns: repeat(2, 188.5px);
+    grid-template-rows: repeat(9, 110px);
+    grid-gap: 10px;
+  }
+  
+  .container-one-new-content-top-hot_item1 {
+    position: relative;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  .container-one-new-content-top-hot_item2 {
+    position: relative;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  /* kết thúc container one mobile */
+  
+  /* bắt đầu container two mobile */
+  
+  .container-two {
+    overflow: hidden;
+    background: #000;
+  }
+  
+  .container-two-title {
+    background: #000 url(/build/img/bg-gradient.png) no-repeat top;
+    color: #ff4c00;
+    font-size: 16px;
+    height: 69px;
+    letter-spacing: 5px;
+    line-height: 69px;
+    margin-bottom: 0;
+    position: relative;
+    text-align: center;
+  }
+  
+  .container-two-content-grid-one {
+    position: relative;
+    height: 283px;
+    width: 196px;
+  }
+  
+  .container-two-content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .container-two-content-grid-one-img img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .container-two-content {
+    margin: auto;
+    width: 392px;
+  }
+  .container-two-content-title {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    background: linear-gradient(180deg,hsla(0,0%,100%,0) 0,rgba(0,0,0,.39) 34%,#000 87%);
+  }
+  .container-two-content-title h3 {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    overflow: hidden;
+    padding-left: 5px;
+  }
+  .container-two-content-title p {
+    margin: 0;
+    color: #999;
+    font-size: 12px;
+    margin-top: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 5px;
+  }
+  .container-two-content-FHD {
+    position: absolute;
+    bottom: 70px;
+    left: 5px;
+    background-color: #ff4c00;
+    color: #fff;
+    font-size: 10px;
+    border-radius: 3px;
+    padding: 3px;
+  }
+  .container-two-content-star {
+    position: absolute;
+    bottom: 70px;
+    right: 5px;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+  }
+  .container-three {
+    width: 375px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    padding-top: 40px;
+  }
+  .container-three-new-content {
+    display: grid;
+    grid-template-columns: repeat(2,172.5px);
+    grid-gap: 10px;
+  }
+  .container-one-bottom-content-two {
+    position: relative;
+    color: #eee;
+    float: left;
+    overflow: hidden;
+    height: 250px;
+    width: 172.5px;
+    margin-left: 10px;
+  }
+  #img {
+    width: 100%;
+    height: 100%;
+  }
+  /* kết thúc container */
+  
+  
+  /* bắt đầu footer */
+  
+  footer {    
+    background-color: #000;
+  }
+  .footer_title {
+    color: #ff4c00;
+    font-size: 16px;
+    height: 69px;
+    letter-spacing: 3px;
+    line-height: 69px;
+    margin-bottom: 0;
+    position: relative;
+    text-align: center;
+  }
+  .footer_item {
+    width: 480px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,191px);
+    grid-gap: 15px;
+    justify-content: space-around;
+  }
+  .footer_item_1 {
+    width: 191px;
+    height: 72px;
+  }
+  .footer_item_1 img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* kết thúc footer */
+  
+  
+  
+  /* Tablet */
+  @media only screen and (min-width:740px) and (max-width:1023px) {
+  
+    /* bắt đầu header tablet */
+    .header-grid {
+      display: block;
+    }
+  
+    .header-logo {
+      float: left;
+      height: 60px;
+      padding: 10px 0;
+    }
+  
+    .header-menu {
+      float: left;
+      height: 40px;
+      line-height: 40px;
+      margin-left: 10px;
+      margin-top: 9px;
+      width: 40px;
+    }
+  
+    .header-user {
+      float: right;
+      height: 60px;
+      margin-top: 9px;
+    }
+  
+    .header-pc-left {
+      display: none;
+    }
+  
+    /* kết thúc header tablet */
+  
+    /* bắt đầu container one tablet */
+    .container-one {
+      width: 768px;
+    }
+  
+    .container-one-top-content {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 25%)
+    }
+  
+    .container-one-top-content-top-hot_item {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      height: 282px;
+      width: 496px;
+    }
+  
+    .container-one-bottom-content-one {
+      height: 144px;
+      width: 253px;
+    }
+  
+    #img-mobile {
+      display: none;
+    }
+  
+    #img-pc {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  
+    .container-one-new {
+      width: 768px;
+      overflow: hidden;
+      width: 100%;
+    }
+  
+    .container-one-new-content {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+  
+    .container-one-new-content {
+      width: 100%;
+      grid-template-columns: repeat(4, 186.5px);
+      grid-template-rows: repeat(3, 110px);
+    }
+  
+    .container-one-new-content-top-hot_item1 {
+      position: relative;
+      height: 228px;
+      width: 376px;
+      padding: 0;
+    }
+  
+    .container-one-new-content-top-hot_item2 {
+      position: relative;
+      height: 110px;
+      width: 179.5px;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 3;
+      grid-column-end: 4;
+    }
+  
+    .container-one-new-content-one {
+      padding: 0;
+      height: 110px;
+      width: 179.5px;
+    }
+  
+    .container-one-new-content-top-hot_item2 {
+      padding-bottom: 6px;
+    }
+  
+    /* kết thúc container one tablet */
+  
+    /* bắt đầu container two tablet */
+    .container-two-content-grid {
+      display: block;
+      width: 9999px;
+    }
+    .container-two-content {
+      margin: auto;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      width: 800px;
+    }
+    .container-two-content-grid-one {
+      height: 289px;
+      width: 200px;
+      float: left;
+      overflow: hidden;
+      position: relative;
+    }
+  
+    /* kết thúc container two tablet */
+  
+    /* bắt đầu container three tablet */
+    .container-three {
+      width: 768px;
+    }
+    .container-three-new-content {
+      display: block;
+      width: 9999px;
+      overflow: hidden;
+      position: relative;
+    }
+    .container-one-bottom-content-two {
+      height: 260px;
+      width: 179.5px;
+    }
+  
+    /* kết thúc container three tablet */
+  
+  
+    /* bắt đầu footer tablet */
+  
+    .footer_item {
+      width: 768px;
+      margin: auto;
+      grid-template-columns: repeat(4,191px);
+      grid-gap: 10px;
+    }
+    /* kết thúc footer tablet */
+  }
+  
+  /* PC */
+  @media only screen and (min-width:1024px) {
+  
+    /* bắt đầu header pc */
+    .header-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 60px;
+    }
+  
+    .header-grid {
+      width: 100%;
+      grid-template-columns: 10% 80% 10%;
+  
+    }
+  
+    .header-menu {
+      display: none;
+    }
+  
+    .header-pc-left {
+      display: block;
+      float: left;
+      width: 100%;
+      position: relative;
+      height: 100%;
+    }
+  
+    .header-pc-menu {
+      width: 70%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+    }
+  
+    .header-pc-menu>li {
+      list-style: none;
+    }
+  
+    .header-pc-menu a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #ccc;
+      font-size: 14px;
+      padding: 20px 0;
+    }
+  
+    .header-pc-search {
+      width: 30%;
+      margin-top: -30px;
+      position: absolute;
+      top: 24px;
+      right: 10px;
+    }
+  
+    #category-menu {
+      display: none;
+      width: 470px;
+      background: rgba(0, 0, 0, .8);
+      position: absolute;
+      top: 45px;
+      list-style: none;
+      padding: 10px;
+      border-bottom: 1px solid silver;
+    }
+  
+    #category:hover>a {
+      color: #ff4c00;
+    }
+  
+    #nation:hover>a {
+      color: #ff4c00;
+    }
+  
+    #odd-movie:hover>a {
+      color: #ff4c00;
+    }
+  
+    #series-movie:hover>a {
+      color: #ff4c00;
+    }
+  
+    #theater:hover>a {
+      color: #ff4c00;
+    }
+  
+    #coming-soon:hover>a {
+      color: #ff4c00;
+    }
+  
+    #category:hover #category-menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(10, 30px);
+    }
+  
+    #category-menu li:hover a {
+      color: #ff4c00;
+    }
+  
+    #nation-menu {
+      display: none;
+      width: 470px;
+      background: rgba(0, 0, 0, .8);
+      position: absolute;
+      top: 45px;
+      list-style: none;
+      padding: 10px;
+      border-bottom: 1px solid silver;
+    }
+  
+    #nation:hover #nation-menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(6, 30px);
+    }
+  
+    #nation-menu li:hover a {
+      color: #ff4c00;
+    }
+  
+    #odd-movie-menu {
+      display: none;
+      width: 470px;
+      background: rgba(0, 0, 0, .8);
+      position: absolute;
+      top: 45px;
+      list-style: none;
+      padding: 10px;
+      border-bottom: 1px solid silver;
+      z-index: 100;
+    }
+  
+    #odd-movie:hover #odd-movie-menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(6, 30px);
+    }
+  
+    #odd-movie-menu li:hover a {
+      color: #ff4c00;
+    }
+  
+    #series-movie-menu {
+      display: none;
+      width: 470px;
+      background: rgba(0, 0, 0, .8);
+      position: absolute;
+      top: 45px;
+      list-style: none;
+      padding: 10px;
+      border-bottom: 1px solid silver;
+    }
+  
+    #series-movie:hover #series-movie-menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(6, 30px);
+    }
+  
+    #series-movie-menu li:hover a {
+      color: #ff4c00;
+    }
+  
+    /* kết thúc header pc */
+  
+    .container-one {
+      margin-left: auto;
+      margin-right: auto;
+      width: 1000px;
+      margin-bottom: 60px;
+    }
+  
+    .container-one-top-content {
+      grid-template-columns: repeat(4, 240px);
+      grid-template-rows: repeat(3, 134px);
+      grid-gap: 10px;
+    }
+  
+    .container-one-top-content-top-hot_item {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      margin: 0;
+    }
+  
+    .container-one-bottom-content-one {
+      height: 134px;
+      width: 240px;
+      padding: 0;
+    }
+  
+    #img-mobile {
+      display: none;
+    }
+  
+    #img-pc {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .container-one-new-content-top-hot_item1 {
+      height: 215px;
+      position: relative;
+      width: 390px;
+      padding: 0;
+    }
+  
+    .container-one-new-content-top-hot_item2 {
+      height: 101px;
+      width: 189.5px;
+      position: relative;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 3;
+      grid-column-end: 4;
+      padding: 0;
+    }
+  
+    .container-one-new-content {
+      width: 100%;
+      grid-template-columns: repeat(5, 190.5px);
+      grid-template-rows: repeat(3, 103px);
+      grid-gap: 10px;
+    }
+  
+    .container-one-new-content-one {
+      padding: 0;
+      height: 102px;
+      width: 190px;
+    }
+  
+    .item-title-new {
+      position: absolute;
+      bottom: 0px;
+    }
+    /* kết thúc container one pc */
+  
+  
+    /* bắt đầu container two pc */
+  
+    .container-two-content-grid {
+      display: block;
+    }
+    .container-two-content {
+      margin: auto;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      width: 1000px;
+    }
+    .container-two-content-grid-one {
+      height: 289px;
+      width: 200px;
+      float: left;
+      overflow: hidden;
+      position: relative;
+      margin-bottom:10px ;
+    }
+    .container-two-title {
+      font-size: 20px;
+    }
+    .container-two-title h5 {
+      margin: 0;
+    }
+  
+    /*kết thúc container two pc  */
+  
+  
+    /* bắt đầu container three pc */
+  
+    .container-three {
+      margin-left: auto;
+      margin-right: auto;
+      width: 1000px;
+      margin-bottom: 60px;
+    }
+    .container-three-new-content {
+      display: block;
+      width: 9999px;
+      overflow: hidden;
+      position: relative;
+    }
+    .container-one-bottom-content-two {
+      height: 275px;
+      width: 190px;
+    }
+  
+    /* kết thúc container three pc */
+  
+  
+  /* bắt đầu footer */
+  .footer_item {
+    width: 990px;
+    margin: auto;
+    grid-template-columns: repeat(4,240px);
+    grid-gap: 10px;
+  }
+  .footer_item_1 {
+    width: 240px;
+    height: 90px;
+  }
+  /* kết thúc container three pc */
+  }
