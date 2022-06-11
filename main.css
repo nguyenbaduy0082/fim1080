@@ -458,6 +458,8 @@ body {
   position: absolute;
   bottom: 15px;
   left: 0px;
+  font-size: 16px;
+  
 }
 
 .film-views {
@@ -624,6 +626,7 @@ body {
   margin: auto;
   position: relative;
   overflow: hidden;
+  padding-top: 40px;
 }
 .container-three-new-content {
   display: grid;
@@ -643,6 +646,15 @@ body {
   width: 100%;
   height: 100%;
 }
+/* kết thúc container */
+
+
+/* bắt đầu footer */
+
+footer {
+  
+}
+
 
 
 /* Tablet */
