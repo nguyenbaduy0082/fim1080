@@ -557,7 +557,7 @@ img:hover {
 }
 
 .container-two-title {
-  background: #000; 
+  background: #000;
   color: #ff4c00;
   font-size: 16px;
   height: 69px;
@@ -825,6 +825,7 @@ footer {
   #none_one {
     display: none;
   }
+
   #none {
     display: none;
   }
@@ -1123,7 +1124,7 @@ footer {
     padding: 0;
     position: relative;
     min-width: 1000px;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 
   .container-two-content-grid-one {
@@ -1149,6 +1150,7 @@ footer {
   #none {
     display: none;
   }
+
   .container-three {
     margin-left: auto;
     margin-right: auto;
