@@ -553,10 +553,11 @@ img:hover {
 .container-two {
   overflow: hidden;
   background: #000;
+  margin-top: 8em;
 }
 
 .container-two-title {
-  background: #000 url(/build/img/bg-gradient.png) no-repeat top;
+  background: #000; 
   color: #ff4c00;
   font-size: 16px;
   height: 69px;
@@ -682,16 +683,15 @@ footer {
 }
 
 .footer_item {
-  width: 480px;
+  max-width: 480px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(2, 191px);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 15px;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .footer_item_1 {
-  width: 191px;
   height: 72px;
 }
 
@@ -814,12 +814,19 @@ footer {
 
   /* bắt đầu container two tablet */
   .container-two-content {
-    display: block;
+    display: flex;
     margin: auto;
-    overflow: scroll;
+    overflow: hidden;
     padding: 0;
     position: relative;
     min-width: 800px;
+  }
+
+  #none_one {
+    display: none;
+  }
+  #none {
+    display: none;
   }
 
   .container-two-content-grid-one {
@@ -837,15 +844,14 @@ footer {
   }
 
   .container-three-new-content {
-    display: block;
-    width: 9999px;
+    display: flex;
     overflow: hidden;
     position: relative;
+    justify-content: center;
   }
 
   .container-one-bottom-content-two {
     height: 260px;
-    width: 179.5px;
   }
 
   /* kết thúc container three tablet */
@@ -854,9 +860,9 @@ footer {
   /* bắt đầu footer tablet */
 
   .footer_item {
-    width: 768px;
+    min-width: 768px;
     margin: auto;
-    grid-template-columns: repeat(4, 191px);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
   }
 
@@ -1110,21 +1116,18 @@ footer {
 
   /* bắt đầu container two pc */
 
-  .container-two-content-grid {
-    display: block;
-  }
 
   .container-two-content {
     margin: auto;
     overflow: hidden;
     padding: 0;
     position: relative;
-    width: 1000px;
+    min-width: 1000px;
+    grid-template-columns: repeat(5,1fr);
   }
 
   .container-two-content-grid-one {
     height: 289px;
-    width: 200px;
     float: left;
     overflow: hidden;
     position: relative;
@@ -1143,24 +1146,25 @@ footer {
 
 
   /* bắt đầu container three pc */
-
+  #none {
+    display: none;
+  }
   .container-three {
     margin-left: auto;
     margin-right: auto;
-    width: 1000px;
+    min-width: 1000px;
     margin-bottom: 60px;
   }
 
   .container-three-new-content {
-    display: block;
-    width: 9999px;
+    display: flex;
     overflow: hidden;
     position: relative;
+    justify-content: center;
   }
 
   .container-one-bottom-content-two {
     height: 275px;
-    width: 190px;
   }
 
   /* kết thúc container three pc */
@@ -1168,14 +1172,13 @@ footer {
 
   /* bắt đầu footer */
   .footer_item {
-    width: 990px;
+    min-width: 990px;
     margin: auto;
-    grid-template-columns: repeat(4, 240px);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
   }
 
   .footer_item_1 {
-    width: 240px;
     height: 90px;
   }
 
