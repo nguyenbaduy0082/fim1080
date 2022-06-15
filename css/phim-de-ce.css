@@ -399,6 +399,20 @@ img:hover {
 
   /* kết thúc header tablet */
 
+  /* bắt đầu container */
+
+  .container {
+    min-width: 768px;
+    margin: 0 auto;
+  }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .content-img {
+    height: 245px;
+  }
+  /* kết thúc container */
 }
 
 
@@ -574,5 +588,19 @@ img:hover {
   }
 
   /* kết thúc header pc */
+
+  /* bắt đầu container pc */
+
+  .container {
+    min-width: 990px;
+    margin: 0 auto;
+  }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .content-img {
+    height: 245px;
+  }
 
 }
